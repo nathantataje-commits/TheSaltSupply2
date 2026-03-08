@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>The Salt Supply | Modern Mutual Aid Network</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --primary: #2C5F2D;
+            --accent: #E2725B;
+            --bg: #F4F5F2;
+            --text: #2D3436;
+            --white: #ffffff;
+            --kindness: #2A9D8F;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 80px;
+            scroll-behavior: smooth;
+        }
+        .playfair { font-family: 'Playfair Display', serif; }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2C5F2D 0%, #1A3628 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class='nav-container'>
+            <div class='logo' onclick="showView('home-sections')">the salt supply.</div>
+            
+            
+            
+            
+            <div class='flex gap-8 font-semibold text-sm uppercase tracking-widest'>
+                <a href='javascript:void(0)' onclick="showView('home-sections')" class='hover:text-[var(--accent)]'>Home</a>
+                <a href='javascript:void(0)' onclick="showView('need-feed-section')" class='hover:text-[var(--accent)]'>Need Feed</a>
+                <a href='javascript:void(0)' onclick="showView('staff-portal-section')" class='hover:text-[var(--accent)]'>Salt Staff</a>
+                <a href='javascript:void(0)' onclick="showView('about-us-section')" class='hover:text-[var(--accent)]'>About Us</a>
+                <a href='javascript:void(0)' onclick="showView('how-it-works-section')" class='hover:text-[var(--accent)]'>How It Works</a>
+            </div>
+
+
+
+
+        </nav>
+    </header>
+    <main>
+        <div id='home-sections'>
+            <section id='vision' class='hero-gradient py-24 px-6 bg-[var(--bg)]'>
+                <div class='max-w-4xl mx-auto text-center'>
+                    <h1 class='playfair text-5xl md:text-7xl font-bold mb-8 text-white'>A Movement Rooted in the Love of Christ.</h1>
+                    <p class='text-xl opacity-90 mb-10 max-w-2xl mx-auto'>Transforming from a media project to a movement. We are building the infrastructure for kindness—a Modern Mutual Aid Network rooted in the love of Christ.</p>
+                </div>
+            </section>
+        <section id='exchange' class='py-20 px-6 max-w-7xl mx-auto bg-white'>
+            <h2 class='playfair text-4xl font-bold mb-12 text-center'>The Salt Exchange</h2>
+            <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                <div class='glass-card border-t-4 border-[var(--primary)]'>
+                    <h3 class='playfair text-2xl mb-4 font-bold'>Salt Staff</h3>
+                    <p class='text-gray-600'>Underutilized skilled labor connected to mission-critical community crises through a Modern Mutual Aid Network.</p>
+                </div>
+                <div class='glass-card border-t-4 border-[var(--accent)]'>
+                    <h3 class='playfair text-2xl mb-4 font-bold'>Void-Level Needs</h3>
+                    <p class='text-gray-600'>Solving the 'Character Deficit' by matching high-fidelity talent with critical community requirements.</p>
+                </div>
+                <div class='glass-card border-t-4 border-[var(--primary)]'>
+                    <h3 class='playfair text-2xl mb-4 font-bold'>Proof-of-Work</h3>
+                    <p class='text-gray-600'>Funded by strategic corporate capital seeking 'Proof-of-Work' advertising and high-fidelity recruitment data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id='framework' class='bg-white py-20 px-6'>
+            <div class='max-w-5xl mx-auto'>
+                <div class='grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+                    <div>
+                        <h2 class='playfair text-4xl font-bold mb-6 text-[var(--primary)]'>B-Corp Technical Utility</h2>
+                        <p class='text-lg leading-relaxed mb-6'>The Salt Supply is engineered to solve the 2026 'Character Deficit' in the global labor market. It operates as a triple-sided marketplace connecting 'Salt Staff' to 'Void-Level Needs'.</p>
+                        <div class='space-y-4'>
+                            <div class='p-4 bg-[var(--bg)] rounded-xl border-l-4 border-[var(--accent)]'>
+                                <b>Human Capital Optimization:</b> Redemptive infrastructure for the 2026 macro-economic narrative.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='glass-card bg-[#1A3628] text-white flex flex-col justify-center items-center text-center border-t-4 border-[var(--accent)]'>
+                        <div class='text-5xl font-bold text-[#E2725B] mb-2' id='impact-counter'>1,240</div>
+                        <div class='text-xs uppercase tracking-widest opacity-60'>Lives Impacted Today</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+        <section id='need-feed-section' style='display:none;' class='py-20 px-6 max-w-7xl mx-auto bg-white'>
+            <h2 class='playfair text-4xl font-bold mb-12 text-center'>Community Need Feed</h2>
+            <div id='need-feed-container' class='space-y-6'>
+                <div class='glass-card p-6 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade border-t-4 border-[var(--primary)]'>
+                    <div class='flex-1'>
+                        <span class='text-[10px] uppercase tracking-widest font-bold' style='color: var(--kindness)'>Small Need</span>
+                        <h3 class='playfair text-2xl font-bold mb-2'>Cup of Coffee</h3>
+                        <p class='text-gray-600'>Looking for a quick caffeine boost and a friendly chat at the local cafe.</p>
+                    </div>
+                    <div class='flex-shrink-0'>
+                        <button class='btn-primary text-sm py-2 px-6' onclick="offerHelp('a community need')">Offer Help</button>
+                    </div>
+                </div>
+        
+
+                <div class='glass-card p-6 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade border-t-4 border-[var(--accent)]'>
+                    <div class='flex-1'>
+                        <span class='text-[10px] uppercase tracking-widest font-bold' style='color: var(--kindness)'>Small Need</span>
+                        <h3 class='playfair text-2xl font-bold mb-2'>Homework Help</h3>
+                        <p class='text-gray-600'>8th grade algebra support needed for quadratic equations. 1 hour session.</p>
+                    </div>
+                    <div class='flex-shrink-0'>
+                        <button class='btn-primary text-sm py-2 px-6' onclick="offerHelp('a community need')">Offer Help</button>
+                    </div>
+                </div>
+        
+
+                <div class='glass-card p-6 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade border-t-4 border-[var(--primary)]'>
+                    <div class='flex-1'>
+                        <span class='text-[10px] uppercase tracking-widest font-bold' style='color: var(--primary)'>Moderate Need</span>
+                        <h3 class='playfair text-2xl font-bold mb-2'>Moving Boxes</h3>
+                        <p class='text-gray-600'>Need help loading a small truck for a cross-town move this Saturday.</p>
+                    </div>
+                    <div class='flex-shrink-0'>
+                        <button class='btn-primary text-sm py-2 px-6' onclick="offerHelp('a community need')">Offer Help</button>
+                    </div>
+                </div>
+        
+
+                <div class='glass-card p-6 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade border-t-4 border-[var(--accent)]'>
+                    <div class='flex-1'>
+                        <span class='text-[10px] uppercase tracking-widest font-bold' style='color: var(--accent)'>Great Need</span>
+                        <h3 class='playfair text-2xl font-bold mb-2'>Car Engine Repair</h3>
+                        <p class='text-gray-600'>Engine stalling issues. Seeking someone with mechanical expertise to diagnose.</p>
+                    </div>
+                    <div class='flex-shrink-0'>
+                        <button class='btn-primary text-sm py-2 px-6' onclick="offerHelp('a community need')">Offer Help</button>
+                    </div>
+                </div>
+        </div>
+        </section>
+    
+<section id='staff-portal-section' style='display:none;' class='py-20 px-6 max-w-7xl mx-auto animate-fade bg-[var(--bg)]'>
+    <div class='glass-card mb-12 border-t-4 border-[var(--primary)]'>
+        <h2 class='playfair text-4xl font-bold mb-6 text-[var(--primary)] text-center'>The Salt Staff Mission</h2>
+        <p class='text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto'>
+            The Salt Staff is a specialized labor force engineered to bridge the 'Character Deficit.' We connect highly skilled, mission-aligned individuals to community crises that require more than just a pair of hands—they require heart, expertise, and a commitment to redemptive work.
+        </p>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+        <div class='glass-card p-8 border-t-4 border-[var(--kindness)]'>
+            <h3 class='playfair text-xl font-bold mb-4'>1. Vetting Process</h3>
+            <p class='text-sm text-gray-600'>Every staff member undergoes a rigorous character assessment and background check to ensure alignment with our Modern Mutual Aid values.</p>
+        </div>
+        <div class='glass-card p-8 border-t-4 border-[var(--primary)]'>
+            <h3 class='playfair text-xl font-bold mb-4'>2. Skill Documentation</h3>
+            <p class='text-sm text-gray-600'>We require proof of expertise. Be prepared to provide certifications, degrees, or a portfolio of 'Proof-of-Work' in your field.</p>
+        </div>
+        <div class='glass-card p-8 border-t-4 border-[var(--accent)]'>
+            <h3 class='playfair text-xl font-bold mb-4'>3. Personal Identifiers</h3>
+            <p class='text-sm text-gray-600'>Full transparency is required. Applicants must provide valid LinkedIn profiles, social identifiers, and verified contact details.</p>
+        </div>
+    </div>
+
+    <div class='text-center'>
+        <button onclick="showView('application-form-section')" class='btn-primary text-xl py-4 px-12 shadow-lg' style='background: var(--accent)'>
+            Apply to Join the Staff
+        </button>
+    </div>
+</section>
+
+<section id='application-form-section' style='display:none;' class='py-20 px-6 max-w-5xl mx-auto animate-fade bg-white'>
+    <div class='glass-card border-t-4 border-[var(--primary)]'>
+        <div class='flex justify-between items-center mb-8'>
+            <h2 class='playfair text-3xl font-bold text-[var(--primary)]'>Salt Staff Application</h2>
+            <button onclick="showView('staff-portal-section')" class='text-sm font-semibold uppercase tracking-widest text-gray-500 hover:text-[var(--accent)]'>&larr; Back to Info</button>
+        </div>
+
+        <form id='staff-app-form' class='space-y-6'>
+            <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                <!-- Basic Info -->
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Full Name</label>
+                    <input type='text' placeholder='John Doe' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Age</label>
+                    <input type='number' placeholder='25' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Email Address</label>
+                    <input type='email' placeholder='john@example.com' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Phone Number</label>
+                    <input type='tel' placeholder='+1 (555) 000-0000' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Location (City, State)</label>
+                    <input type='text' placeholder='Nashville, TN' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Social / LinkedIn Profile</label>
+                    <input type='url' placeholder='https://linkedin.com/in/username' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                <div class='md:col-span-2 space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Religious Affiliation (Optional)</label>
+                    <input type='text' placeholder='Community or Church Name' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'>
+                </div>
+                
+                <!-- Qualifications -->
+                <div class='md:col-span-2 space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Degrees & Education</label>
+                    <textarea rows='3' placeholder='List your academic achievements...' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'></textarea>
+                </div>
+                <div class='md:col-span-2 space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Certifications & Specialized Training</label>
+                    <textarea rows='3' placeholder='e.g., PMP, CPR, AWS Architect...' class='w-full p-3 rounded-xl border border-gray-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]'></textarea>
+                </div>
+
+                <!-- File Upload Placeholder -->
+                <div class='md:col-span-2 space-y-2'>
+                    <label class='text-xs uppercase font-bold tracking-wider text-gray-500'>Upload Resume (PDF preferred)</label>
+                    <div class='w-full p-8 border-2 border-dashed border-gray-200 rounded-2xl text-center bg-gray-50/30 hover:bg-gray-50/50 transition-colors cursor-pointer'>
+                        <p class='text-sm text-gray-400'>Click to select or drag and drop your file here</p>
+                        <input type='file' class='hidden' id='resume-upload'>
+                    </div>
+                </div>
+            </div>
+
+            <div class='pt-6'>
+                <button type='button' class='btn-primary w-full py-4 text-lg' onclick='handleStaffSubmit(event)' style='background: var(--primary)'>
+                    Submit Application
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+    
+<section id='about-us-section' style='display:none;' class='py-20 px-6 max-w-7xl mx-auto animate-fade bg-[var(--bg)]'>
+    <div class='text-center mb-12'>
+        <h2 class='playfair text-4xl font-bold mb-4 text-[var(--primary)]'>About The Salt Supply</h2>
+        <p class='text-gray-600 max-w-2xl mx-auto'>A Modern Mutual Aid Network engineered for redemptive human capital optimization.</p>
+    </div>
+
+    <!-- Sub-navigation Tabs -->
+    <div class='flex flex-wrap justify-center gap-4 mb-10'>
+        <button onclick="showSubView('deficit')" class='sub-nav-btn active-tab px-4 py-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[var(--primary)]'>The Deficit</button>
+        <button onclick="showSubView('infrastructure')" class='sub-nav-btn px-4 py-2 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-[var(--accent)]'>Infrastructure</button>
+        <button onclick="showSubView('aid')" class='sub-nav-btn px-4 py-2 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-[var(--accent)]'>Mutual Aid</button>
+        <button onclick="showSubView('narrative')" class='sub-nav-btn px-4 py-2 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-[var(--accent)]'>2026 Narrative</button>
+        <button onclick="showSubView('action')" class='sub-nav-btn px-4 py-2 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-[var(--accent)]'>Action</button>
+    </div>
+
+    <!-- Sub-content Sections -->
+    <div id='about-sub-content'>
+        <!-- 1. The Character Deficit -->
+        <div id='sub-view-deficit' class='glass-card animate-fade border-t-4 border-[var(--accent)]'>
+            <h3 class='playfair text-2xl font-bold mb-4'>The Character Deficit</h3>
+            <div class='space-y-6'>
+                <p><strong>The Problem:</strong> The 2026 global labor market faces a critical shortage of reliability and integrity, where traditional metrics fail to measure the human soul's capacity for service.</p>
+                <p><strong>The Salt Supply Response:</strong> We operate as a triple-sided marketplace connecting underutilized skilled labor to mission-critical community crises, validating character through 'Proof-of-Work'.</p>
+            </div>
+        </div>
+
+        <!-- 2. Redemptive Infrastructure -->
+        <div id='sub-view-infrastructure' style='display:none;' class='glass-card animate-fade border-t-4 border-[var(--primary)]'>
+            <h3 class='playfair text-2xl font-bold mb-4'>Redemptive Infrastructure</h3>
+            <div class='space-y-6'>
+                <p><strong>The Problem:</strong> Most social media and media projects lack the physical infrastructure to convert digital attention into tangible community impact.</p>
+                <p><strong>The Salt Supply Response:</strong> We provide a B-Corp technical utility that functions as a staffing company for kindness, giving the movement the operational backbone required for scale.</p>
+            </div>
+        </div>
+
+        <!-- 3. Modern Mutual Aid -->
+        <div id='sub-view-aid' style='display:none;' class='glass-card animate-fade border-t-4 border-[var(--accent)]'>
+            <h3 class='playfair text-2xl font-bold mb-4'>Modern Mutual Aid</h3>
+            <div class='space-y-6'>
+                <p><strong>The Problem:</strong> Government and institutional aid programs often feel impersonal and fail to leverage the specific skills of the local community.</p>
+                <p><strong>The Salt Supply Response:</strong> We are building a volunteer-based service platform where 'Salt Staff' deploy their professional expertise to solve 'Void-Level Needs' in real-time.</p>
+            </div>
+        </div>
+
+        <!-- 4. The 2026 Narrative -->
+        <div id='sub-view-narrative' style='display:none;' class='glass-card animate-fade border-t-4 border-[var(--primary)]'>
+            <h3 class='playfair text-2xl font-bold mb-4'>The 2026 Narrative</h3>
+            <div class='space-y-6'>
+                <p><strong>The Problem:</strong> The macro-economic landscape is shifting toward a value system that prioritizes fidelity and recruitment data over generic advertising.</p>
+                <p><strong>The Salt Supply Response:</strong> We offer strategic corporate capital a way to fund social good while receiving high-fidelity data on the character and skills of the labor force.</p>
+            </div>
+        </div>
+
+        <!-- 5. Christ-Centered Action -->
+        <div id='sub-view-action' style='display:none;' class='glass-card animate-fade border-t-4 border-[var(--accent)]'>
+            <h3 class='playfair text-2xl font-bold mb-4'>Christ-Centered Action</h3>
+            <div class='space-y-6'>
+                <p><strong>The Problem:</strong> Theoretical faith often remains trapped in the pews, lacking a conduit to enter the marketplace of community needs.</p>
+                <p><strong>The Salt Supply Response:</strong> Rooted in the love of Christ, we move from a media project to a movement, acting as the hands and feet to serve the most vulnerable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<section id='how-it-works-section' style='display:none;' class='py-20 px-6 max-w-7xl mx-auto animate-fade bg-white'>
+    <div class='text-center mb-12'>
+        <h2 class='playfair text-4xl font-bold mb-4 text-[var(--primary)]'>How It Works</h2>
+        <p class='text-gray-600 max-w-3xl mx-auto'>Operationalizing the Modern Mutual Aid Network through strategic synchronization of capital and character.</p>
+    </div>
+
+    <!-- Main Operational Mechanics Card -->
+    <div class='glass-card mb-12 border-t-4 border-[var(--primary)]'>
+        <h3 class='playfair text-2xl font-bold mb-6 text-[var(--primary)]'>Operational Mechanics</h3>
+        <div class='mt-6'>
+            
+<div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+    
+    <div class='glass-card p-8 border-t-4 border-[var(--primary)] animate-fade'>
+        <h3 class='playfair text-2xl font-bold mb-6'>Strategic Engine</h3>
+        <ul class='space-y-3 text-sm text-gray-700'><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>The Salt Supply operates as a sophisticated B-Corp technical utility, engineered to resolve the 'Character Deficit' of the 2026 global labor market through a triple-sided marketplace.</span></li><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>This strategic engine synchronizes corporate capital with community needs, creating a self-sustaining cycle of redemption that transforms the project from a media-driven account into a professional staffing company for kindness.</span></li></ul>
+    </div>
+    
+    <div class='glass-card p-8 border-t-4 border-[var(--primary)] animate-fade'>
+        <h3 class='playfair text-2xl font-bold mb-6'>Capital Flow</h3>
+        <ul class='space-y-3 text-sm text-gray-700'><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>Corporate Capital Deployment acts as the fuel for the network, providing the necessary liquidity to fund 'Void-Level Needs'—critical community crises requiring immediate, skilled intervention.</span></li><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>This capital is a strategic investment in human capital optimization, enabling the deployment of Salt Staff into environments where their expertise generates the highest social and economic return.</span></li></ul>
+    </div>
+    
+    <div class='glass-card p-8 border-t-4 border-[var(--primary)] animate-fade'>
+        <h3 class='playfair text-2xl font-bold mb-6'>Verification Loop</h3>
+        <ul class='space-y-3 text-sm text-gray-700'><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>The 'Verification Loop' is powered by Proof-of-Work Advertising, replacing speculative attention with high-fidelity evidence of a brand's commitment to social good.</span></li><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>Every successful deployment generates verified, localized, and emotionally resonant marketing assets that provide quantifiable proof of work, fostering a feedback loop of brand loyalty and community trust.</span></li></ul>
+    </div>
+    
+    <div class='glass-card p-8 border-t-4 border-[var(--primary)] animate-fade'>
+        <h3 class='playfair text-2xl font-bold mb-6'>Data Fidelity</h3>
+        <ul class='space-y-3 text-sm text-gray-700'><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>Salt Staff recruitment metrics provide high-fidelity data that validates character through reliability, integrity, and redemptive excellence.</span></li><li class='flex gap-2'><span class='text-[var(--primary)] font-bold'>•</span><span>This multi-tier vetting system transforms field performance into premium recruitment data for corporate partners, allowing them to identify 'battle-tested' talent who have been validated through real-world community crisis resolution.</span></li></ul>
+    </div>
+    
+</div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-10'>
+        <!-- Corporate Partnerships Subsection -->
+        <div class='glass-card border-t-4 border-[var(--primary)]'>
+            <h3 class='playfair text-2xl font-bold mb-6'>Corporate Partnerships</h3>
+            <ul class='space-y-4 text-gray-700'>
+                <li class='flex gap-3'>
+                    <span class='text-[var(--primary)] font-bold'>•</span>
+                    <div>
+                        <span class='font-bold block'>Corporate Capital Deployment</span>
+                        <ul class='ml-4 mt-2 space-y-2 text-sm text-gray-600'>
+                            <li>• Strategic investment in human capital optimization beyond simple philanthropy.</li>
+                            <li>• Provision of liquidity to fund 'Void-Level Needs' in community crises.</li>
+                            <li>• High-impact social and economic return via redemptive intervention.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class='flex gap-3'>
+                    <span class='text-[var(--primary)] font-bold'>•</span>
+                    <div>
+                        <span class='font-bold block'>Proof-of-Work Advertising</span>
+                        <ul class='ml-4 mt-2 space-y-2 text-sm text-gray-600'>
+                            <li>• Replacement of speculative attention with verified 'Proof-of-Work' validation.</li>
+                            <li>• Creation of documented, localized, and emotionally resonant marketing assets.</li>
+                            <li>• Quantifiable evidence of brand commitment to social good and community trust.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Volunteer Benefits Subsection -->
+        <div class='glass-card border-t-4 border-[var(--accent)]'>
+            <h3 class='playfair text-2xl font-bold mb-6'>Volunteer Benefits</h3>
+            <ul class='space-y-4 text-gray-700'>
+                <li class='flex gap-3'>
+                    <span class='text-[var(--primary)] font-bold'>•</span>
+                    <div>
+                        <span class='font-bold block'>Salt Staff Recruitment Metrics</span>
+                        <ul class='ml-4 mt-2 space-y-2 text-sm text-gray-600'>
+                            <li>• Multi-tier vetting system focusing on character, reliability, and integrity.</li>
+                            <li>• Documentation of professional expertise and personal identifiers.</li>
+                            <li>• Validation of talent through real-world community crisis resolution.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class='flex gap-3'>
+                    <span class='text-[var(--primary)] font-bold'>•</span>
+                    <div>
+                        <span class='font-bold block'>Skill Documentation & Validation</span>
+                        <ul class='ml-4 mt-2 space-y-2 text-sm text-gray-600'>
+                            <li>• Professional portfolio building via 'Proof-of-Work' in the field.</li>
+                            <li>• High-fidelity performance tracking for premium recruitment data.</li>
+                            <li>• Access to 'battle-tested' credentials for future career opportunities.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <script>
+        function showView(viewId) {
+            const sections = [
+                'home-sections',
+                'need-feed-section',
+                'staff-portal-section',
+                'application-form-section',
+                'about-us-section',
+                'how-it-works-section'
+            ];
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+            const selected = document.getElementById(viewId);
+            if (selected) selected.style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function showSubView(subId) {
+            const subViews = ['deficit', 'infrastructure', 'aid', 'narrative', 'action'];
+            subViews.forEach(id => {
+                const el = document.getElementById('sub-view-' + id);
+                if (el) el.style.display = 'none';
+            });
+            const activeView = document.getElementById('sub-view-' + subId);
+            if (activeView) activeView.style.display = 'block';
+            const buttons = document.querySelectorAll('.sub-nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-tab');
+                btn.style.borderBottomColor = 'transparent';
+            });
+            const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(subId));
+            if (activeBtn) {
+                activeBtn.classList.add('active-tab');
+                activeBtn.style.borderBottomColor = 'var(--primary)';
+            }
+        }
+
+        let currentImpact = 1240;
+        setInterval(() => {
+            const counterEl = document.getElementById('impact-counter');
+            if (counterEl) {
+                currentImpact += Math.floor(Math.random() * 3) + 1;
+                counterEl.innerText = currentImpact.toLocaleString();
+            }
+        }, 5000);
+
+        function handleStaffSubmit(event) {
+            if (event) event.preventDefault();
+            alert('Thank you for your Salt Staff application!');
+            showView('home-sections');
+            return false;
+        }
+
+        function offerHelp(needTitle) {
+            alert('Help committed for: ' + needTitle);
+        }
+
+        window.onload = () => showView('home-sections');
+    </script>
+</body>
+</html>
